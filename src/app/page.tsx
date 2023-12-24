@@ -12,7 +12,7 @@ export default function Home() {
         <Header name="Konstantin" age={51} isMan={true}>
           <Logo />
         </Header>
-        Main page of my application
+        <h1>Main page of my application</h1>
       </div>
       <div>
         <div className="w-[500px]">
