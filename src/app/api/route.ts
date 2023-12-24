@@ -13,8 +13,3 @@ export async function POST(request: Request) {
     });
 }
 
-export async function PATCH() {
-    return NextResponse.json({
-        hello: "world",
-    });
-}
