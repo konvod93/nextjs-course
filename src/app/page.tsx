@@ -1,9 +1,29 @@
-"use client";
+
 
 import Header from "@/components/Header";
 import Logo from "@/components/Header/Logo";
 import Image from "next/image";
 import lhasa from "../../public/next.svg";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'My page title',
+  description: 'This a description',
+  openGraph: {
+    title: "My page title",
+    description: "This a description",
+    url: "mywebsite.com",
+    siteName: "KonvodSite",
+    images: [
+      {
+        url: '/mywebsite.png',
+        width: 1260,
+        height: 800, 
+      },
+    ],
+    
+  }
+}
 
 export default function Home() {
   return (
