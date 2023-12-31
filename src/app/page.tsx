@@ -1,13 +1,23 @@
-"use client"
-
-import { useAppContext } from "@/context";
+"use client";
+import { userStore } from '@/store/user'
 
 export default function Home() {
-  const { name, setName } = useAppContext();
+  const user = userStore((state: any) => state.user) 
+  const updateUser = userStore((state: any) => state.updateUser)
+  
+  const sub = userStore.subscribe(() => {
+    // trigger another function
+  })
+
+  sub()
     return (
     <main className="flex gap-2 m-4">
-      <span>{name}</span>
-      <button onClick={() => setName('Ivan')}>Change name</button>    
+      <p>{user.full_name}</p>
+      <input className='border' type="text" onChange={(e: any) => {
+        updateUser({
+          full_name: e.target.value
+        })
+      }} />   
     </main>
   );
 }
