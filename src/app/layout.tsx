@@ -2,7 +2,8 @@
 
 import { Roboto } from 'next/font/google'
 import './globals.css'
-import { Toaster } from 'sonner'
+import { AppWrapper } from '@/context'
+
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
@@ -14,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div>{children}</div>
-        <Toaster expand={false} richColors position="top-right" />
+        <AppWrapper>{children}</AppWrapper>
+               
       </body>
     </html>
   )
