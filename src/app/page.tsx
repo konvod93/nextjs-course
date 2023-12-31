@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client"
+import { toast } from "sonner";
 
 
 export default function Home() {
@@ -7,10 +8,7 @@ export default function Home() {
   }
   return (
     <main>
-      <h2 className="font-bold">Home page</h2>
-      <h1 className="font-bold text-sky-500">Server component</h1>
-      <p>{randomThreeDigitNumber()}</p>
-      <Link href="/posts">Link to posts page</Link>
+      <button onClick={() => toast.success('Success!')} className="px-5 py-3 text-white bg-blue-500 rounded">Notify me!</button>
     </main>
   );
 }

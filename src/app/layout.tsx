@@ -1,8 +1,8 @@
 "use client"
-import type { Metadata } from 'next'
+
 import { Roboto } from 'next/font/google'
 import './globals.css'
-import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner'
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <div>{children}</div>
-        <Toaster />
+        <Toaster expand={false} richColors position="top-right" />
       </body>
     </html>
   )
